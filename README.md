@@ -24,3 +24,15 @@ Follow these steps to set up the Python vector database environment locally:
     ```bash
     pip install -r requirements.txt
     ```
+
+4. **Start the PostgreSQL Vector Database (Docker required):**
+
+    ```bash
+    docker run --name pgvector-db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=meeting_db -p 5432:5432 -d ankane/pgvector
+    ```
+
+5. **Run the FastAPI server:**
+    ```bash
+    uvicorn mexec:app --reload
+    ```
+    *Note: Ensure your virtual environment is active before running the server. You can access the API at http://127.0.0.1:8000.*
