@@ -1,0 +1,135 @@
+.meeting-player-section {
+  margin-bottom: 32px;
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.player-header h2 {
+  margin: 0;
+  color: #26332d;
+  font-size: 24px;
+}
+
+.player-header p {
+  margin: 6px 0 0;
+  color: #718078;
+  font-size: 14px;
+}
+
+.recording-badge {
+  background: #f4e8df;
+  color: #8a6a4a;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.player-card {
+  background: #fffdf8;
+  border: 1px solid #e8e2d8;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(38, 51, 45, 0.05);
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.recording-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #315c49;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-info strong {
+  display: block;
+  color: #26332d;
+  font-size: 16px;
+}
+
+.player-info span {
+  display: block;
+  margin-top: 4px;
+  color: #7b857f;
+  font-size: 13px;
+}
+
+.player-card audio {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.player-time {
+  color: #66736b;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.player-time strong {
+  color: #315c49;
+}
+
+.timestamp-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timestamp-buttons button {
+  border: 1px solid #d9d2c7;
+  background: #f5f1e8;
+  color: #315c49;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.timestamp-buttons button:hover {
+  background: #315c49;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .player-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .player-header h2 {
+    font-size: 20px;
+  }
+
+  .player-card {
+    padding: 18px;
+  }
+
+  .recording-badge {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .timestamp-buttons {
+    gap: 8px;
+  }
+
+  .timestamp-buttons button {
+    font-size: 12px;
+  }
+}
