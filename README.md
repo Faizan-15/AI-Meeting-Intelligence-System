@@ -1,4 +1,10 @@
-# AI Meeting Intelligence — Transcription & Media Engine Module
+# AI-Meeting-Intelligence-System
+
+AI-powered Meeting Intelligence System that transforms meeting audio/video into structured insights, including summaries, speaker-wise transcripts, decisions, action items, deadlines, unresolved issues, and contextual AI-powered Q&A.
+
+---
+
+# Transcription & Media Engine Module
 
 Ye module Meeting Intelligence System ka core AI pipeline hai. Ye audio/video meeting
 recordings ko leta hai, unhe text mein convert karta hai, speakers identify karta hai,
@@ -32,24 +38,21 @@ aur ek structured, speaker-wise transcript deta hai (timestamps ke saath).
 
 ### 2. Installation
 
-\`\`\`bash
+```bash
 python -m venv venv
-venv\\Scripts\\activate
+venv\Scripts\activate
 pip install -r requirements.txt
-\`\`\`
+```
 
 ### 3. Environment Variables
 
 Project root mein `.env` file banao:
-\`\`\`
-HUGGINGFACE_TOKEN=your_huggingface_token_here
-\`\`\`
 
 ### 4. Run the Server
 
-\`\`\`bash
+```bash
 uvicorn app.main:app --reload
-\`\`\`
+```
 
 Server: `http://127.0.0.1:8000`
 API docs: `http://127.0.0.1:8000/docs`
