@@ -4,9 +4,9 @@ from sqlalchemy import create_engine, Column, Integer, String, Text, text
 from sqlalchemy.orm import declarative_base, sessionmaker
 from pgvector.sqlalchemy import Vector
 from sentence_transformers import SentenceTransformer
-import helpiings as s
 import requests
 import json
+import os
 
 # 1. Database Connection & Setup
 DATABASE_URL = "postgresql://user:password@localhost:5432/meeting_db"
@@ -33,7 +33,7 @@ app = FastAPI()
 embedder = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Define your API Key here directly
-GEMINI_API_KEY = s.API_KEY
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 class QuestionRequest(BaseModel):
     meeting_id: str

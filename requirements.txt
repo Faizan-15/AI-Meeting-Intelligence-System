@@ -4,3 +4,6 @@ sqlalchemy
 pgvector
 openai
 psycopg2-binary
+sentence-transformers
+requests
+pydantic
