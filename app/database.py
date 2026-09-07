@@ -1,11 +1,15 @@
 from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime, Text
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import datetime
+import os
 
-# SQLite database file - "meetings.db" naam ki file khud ban jayegi
-DATABASE_URL = "sqlite:///./meetings.db"
+# Database configuration - SQLite for local, PostgreSQL for cloud
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "sqlite:///./meetings.db"
+)
 
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {})
 SessionLocal = sessionmaker(bind=engine)
 Base = declarative_base()
 
